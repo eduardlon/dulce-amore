@@ -1,6 +1,6 @@
 .page {
   min-height: 100dvh;
-  padding-bottom: 140px;
+  padding-bottom: calc(var(--bottom-nav-height) + var(--safe-bottom) + 140px);
   background: var(--color-bg);
 }
 
@@ -416,13 +416,12 @@
 /* Cart Bar */
 .cartBar {
   position: fixed;
-  bottom: 0;
+  bottom: calc(var(--bottom-nav-height) + var(--safe-bottom));
   left: 50%;
   transform: translateX(-50%);
   width: 100%;
   max-width: var(--max-width);
   padding: var(--space-3) var(--space-4);
-  padding-bottom: calc(var(--space-3) + var(--safe-bottom));
   background: rgba(255, 245, 247, 0.95);
   backdrop-filter: blur(12px);
   z-index: 200;

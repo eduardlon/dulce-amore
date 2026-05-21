@@ -31,6 +31,9 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  background: linear-gradient(145deg, #FFF0F3 0%, #FFE4EC 40%, #FFC1CC 100%);
+  box-shadow: 0 4px 20px rgba(232, 86, 127, 0.12);
+  border: 1px solid rgba(232, 86, 127, 0.08);
 }
 
 .frameImg {
