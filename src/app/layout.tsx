@@ -2,6 +2,7 @@ import type { Metadata, Viewport } from 'next';
 import './globals.css';
 import BottomNav from '@/components/layout/BottomNav';
 import FloatingCart from '@/components/layout/FloatingCart';
+import PWAInstall from '@/components/layout/PWAInstall';
 
 export const metadata: Metadata = {
   title: 'Dolce Amore – Fresas y Crema',
@@ -43,6 +44,7 @@ export default function RootLayout({
         </main>
         <BottomNav />
         <FloatingCart />
+        <PWAInstall />
       </body>
     </html>
   );
