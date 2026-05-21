@@ -15,9 +15,9 @@ const slides: PromoSlide[] = [
   {
     id: 'fresas-con-crema',
     frames: [
-      '/images/products/fresas-frame1.png',
-      '/images/products/fresas-frame2.png',
-      '/images/products/fresas-frame3.png',
+      '/images/products/fresas-con-crema-carousel.png',
+      '/images/products/fresas-con-crema-carousel.png',
+      '/images/products/fresas-con-crema-carousel.png',
     ],
     link: '/producto/fresas-con-crema-14oz',
     alt: 'Fresas con Crema',
@@ -25,9 +25,9 @@ const slides: PromoSlide[] = [
   {
     id: 'merengon',
     frames: [
-      '/images/products/merengon-frame1.png',
-      '/images/products/merengon-frame2.png',
-      '/images/products/merengon-frame3.png',
+      '/images/products/merengon-deluxe-carousel.png',
+      '/images/products/merengon-deluxe-carousel.png',
+      '/images/products/merengon-deluxe-carousel.png',
     ],
     link: '/producto/merengon-deluxe',
     alt: 'Merengón Deluxe',
