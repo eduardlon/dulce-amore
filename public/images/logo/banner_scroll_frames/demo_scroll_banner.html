@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Banner animado con scroll</title>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      background: #fff5f7;
+      font-family: Arial, sans-serif;
+    }
+
+    .space {
+      height: 100vh;
+      display: grid;
+      place-items: center;
+      color: #602033;
+      font-size: clamp(28px, 5vw, 54px);
+      text-align: center;
+      padding: 24px;
+    }
+
+    .banner-scroll-section {
+      height: 260vh;
+      position: relative;
+    }
+
+    .banner-sticky {
+      position: sticky;
+      top: 0;
+      height: 100vh;
+      display: grid;
+      place-items: center;
+      padding: 24px;
+    }
+
+    #scrollBanner {
+      width: min(92vw, 824px);
+      height: auto;
+      display: block;
+      border-radius: 28px;
+    }
+  </style>
+</head>
+<body>
+
+  <section class="space">
+    Baja para reproducir el banner
+  </section>
+
+  <section class="banner-scroll-section" id="bannerSection">
+    <div class="banner-sticky">
+      <img id="scrollBanner" src="banner_scroll_frames/banner_001.webp" alt="Banner animado">
+    </div>
+  </section>
+
+  <section class="space">
+    La animación ya quedó en la última imagen
+  </section>
+
+  <script>
+    const banner = document.getElementById("scrollBanner");
+    const section = document.getElementById("bannerSection");
+
+    const totalFrames = 48;
+    const frames = [];
+    let maxProgress = 0;
+    let isCompleted = false;
+
+    function framePath(index) {
+      return `banner_scroll_frames/banner_${String(index).padStart(3, "0")}.webp`;
+    }
+
+    for (let i = 1; i <= totalFrames; i++) {
+      const img = new Image();
+      img.src = framePath(i);
+      frames.push(img);
+    }
+
+    function updateBanner() {
+      if (isCompleted) {
+        banner.src = framePath(totalFrames);
+        return;
+      }
+
+      const start = section.offsetTop;
+      const end = start + section.offsetHeight - window.innerHeight;
+      const current = window.scrollY;
+
+      let progress = (current - start) / (end - start);
+      progress = Math.max(0, Math.min(1, progress));
+
+      // Esto hace que NO se devuelva la animación cuando el usuario sube.
+      maxProgress = Math.max(maxProgress, progress);
+
+      const frameIndex = Math.floor(maxProgress * (totalFrames - 1));
+      banner.src = frames[frameIndex].src;
+
+      // Cuando llega al final, se queda fija en el último frame.
+      if (maxProgress >= 0.995) {
+        isCompleted = true;
+        banner.src = framePath(totalFrames);
+      }
+    }
+
+    window.addEventListener("scroll", updateBanner, { passive: true });
+    window.addEventListener("resize", updateBanner);
+    updateBanner();
+  </script>
+
+</body>
+</html>

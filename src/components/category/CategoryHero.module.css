@@ -1,0 +1,98 @@
+.hero {
+  margin: var(--space-2) var(--space-4);
+  border-radius: var(--radius-xl);
+  padding: var(--space-5);
+  position: relative;
+  overflow: hidden;
+  min-height: 180px;
+  display: flex;
+  flex-direction: column;
+}
+
+.content {
+  flex: 1;
+  position: relative;
+  z-index: 2;
+  max-width: 60%;
+}
+
+.title {
+  font-family: var(--font-display);
+  font-size: var(--text-2xl);
+  font-weight: 800;
+  color: var(--color-wine);
+  line-height: 1.1;
+  margin-bottom: var(--space-2);
+}
+
+.description {
+  font-size: var(--text-xs);
+  color: var(--color-brown);
+  line-height: 1.4;
+  margin-bottom: var(--space-2);
+}
+
+.phrase {
+  font-size: var(--text-xs);
+  color: var(--color-pink-dark);
+  font-weight: 600;
+  font-style: italic;
+}
+
+.imageArea {
+  position: absolute;
+  right: 15px;
+  top: 50%;
+  transform: translateY(-55%);
+  width: 130px;
+  height: 130px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.mainEmoji {
+  font-size: 5rem;
+  filter: drop-shadow(0 4px 12px rgba(0,0,0,0.15));
+}
+
+.floatingHeart {
+  position: absolute;
+  right: -5px;
+  top: 5px;
+  font-size: 1.2rem;
+  animation: float 3s ease-in-out infinite;
+}
+
+.floatingHeart2 {
+  position: absolute;
+  left: -10px;
+  bottom: 10px;
+  font-size: 1rem;
+  animation: float 2.5s ease-in-out infinite 0.5s;
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0px) rotate(0deg); }
+  50% { transform: translateY(-8px) rotate(5deg); }
+}
+
+.dots {
+  display: flex;
+  gap: var(--space-2);
+  margin-top: var(--space-3);
+  position: relative;
+  z-index: 2;
+}
+
+.dot {
+  width: 8px;
+  height: 8px;
+  border-radius: var(--radius-full);
+  background: rgba(92, 26, 50, 0.15);
+}
+
+.dotActive {
+  width: 20px;
+  background: var(--color-pink);
+}

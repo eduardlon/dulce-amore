@@ -1,0 +1,99 @@
+.header {
+  display: grid;
+  grid-template-columns: 1.2fr auto 1fr;
+  align-items: center;
+  padding: var(--space-4) var(--space-4);
+  position: relative;
+  background-color: transparent;
+  gap: var(--space-2);
+}
+
+.greetingWrap {
+  display: flex;
+  flex-direction: column;
+}
+
+.greetingText {
+  font-family: var(--font-body);
+  font-size: var(--text-md);
+  font-weight: 800;
+  color: var(--color-wine);
+  line-height: 1.2;
+}
+
+.subtitleText {
+  font-family: var(--font-body);
+  font-size: var(--text-sm);
+  color: var(--color-gray-warm);
+  line-height: 1.3;
+  margin-top: var(--space-1);
+}
+
+.logoLink {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 10;
+}
+
+.logoContainer {
+  height: 55px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: visible;
+}
+
+.logoImg {
+  height: 100%;
+  width: auto;
+  object-fit: contain;
+  filter: drop-shadow(0px 4px 8px rgba(232, 86, 127, 0.1));
+}
+
+.actionsWrap {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.bellBtn {
+  width: 44px;
+  height: 44px;
+  border-radius: var(--radius-full);
+  background-color: var(--color-white);
+  box-shadow: var(--shadow-sm);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  border: 1px solid var(--color-pink-ultra-light);
+  transition: all var(--transition-fast);
+}
+
+.bellBtn:active {
+  transform: scale(0.95);
+  background-color: var(--color-pink-ultra-light);
+}
+
+.bellIcon {
+  color: var(--color-wine);
+}
+
+.bellBadge {
+  position: absolute;
+  top: -2px;
+  right: -2px;
+  background-color: var(--color-pink);
+  color: var(--color-white);
+  font-size: 10px;
+  font-weight: 800;
+  min-width: 18px;
+  height: 18px;
+  border-radius: var(--radius-full);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid var(--color-white);
+  padding: 0 4px;
+}

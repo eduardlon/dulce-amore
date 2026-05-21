@@ -1,0 +1,22 @@
+{
+  "name": "Dolce Amore – Fresas y Crema",
+  "short_name": "Dolce Amore",
+  "description": "Dulcería artesanal de postres fríos y fresas con crema",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#FFF5F7",
+  "theme_color": "#E8567F",
+  "orientation": "portrait",
+  "icons": [
+    {
+      "src": "/images/logo/logo-192.png",
+      "type": "image/png",
+      "sizes": "192x192"
+    },
+    {
+      "src": "/images/logo/logo-512.png",
+      "type": "image/png",
+      "sizes": "512x512"
+    }
+  ]
+}

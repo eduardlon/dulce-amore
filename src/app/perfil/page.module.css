@@ -1,0 +1,257 @@
+.container {
+  padding: var(--space-4);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+}
+
+/* User Card */
+.profileCard {
+  display: flex;
+  align-items: center;
+  gap: var(--space-4);
+  background: var(--gradient-pink-soft);
+  border-radius: var(--radius-2xl);
+  padding: var(--space-5);
+  box-shadow: var(--shadow-sm);
+  border: 1px solid rgba(232, 86, 127, 0.1);
+}
+
+.avatarWrap {
+  position: relative;
+}
+
+.avatar {
+  width: 64px;
+  height: 64px;
+  border-radius: var(--radius-full);
+  background: var(--color-white);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2.2rem;
+  box-shadow: var(--shadow-md);
+  border: 2px solid var(--color-pink-light);
+}
+
+.avatarBadge {
+  position: absolute;
+  bottom: -2px;
+  right: -2px;
+  background: var(--gradient-pink);
+  color: white;
+  width: 20px;
+  height: 20px;
+  border-radius: var(--radius-full);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 10px;
+  border: 2px solid white;
+  box-shadow: var(--shadow-sm);
+}
+
+.profileInfo {
+  display: flex;
+  flex-direction: column;
+}
+
+.profileName {
+  font-family: var(--font-display);
+  font-size: var(--text-lg);
+  font-weight: 800;
+  color: var(--color-wine);
+}
+
+.profileTag {
+  font-size: var(--text-xs);
+  color: var(--color-pink);
+  font-weight: 700;
+  background: var(--color-white);
+  padding: 2px 8px;
+  border-radius: var(--radius-full);
+  width: fit-content;
+  margin-top: 4px;
+  box-shadow: 0 1px 4px rgba(232, 86, 127, 0.1);
+}
+
+/* Loyalty Points */
+.pointsCard {
+  background: var(--color-white);
+  border-radius: var(--radius-xl);
+  padding: var(--space-4);
+  box-shadow: var(--shadow-sm);
+  border: 1px solid rgba(232, 86, 127, 0.05);
+}
+
+.pointsHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: var(--space-2);
+}
+
+.pointsTitle {
+  font-size: var(--text-base);
+  font-weight: 800;
+  color: var(--color-wine);
+}
+
+.pointsValue {
+  font-size: var(--text-lg);
+  font-weight: 800;
+  color: var(--color-pink);
+}
+
+.progressBg {
+  background: var(--color-gray-light);
+  height: 10px;
+  border-radius: var(--radius-full);
+  overflow: hidden;
+  margin-bottom: var(--space-2);
+}
+
+.progressBar {
+  background: var(--gradient-pink);
+  height: 100%;
+  border-radius: var(--radius-full);
+}
+
+.pointsNote {
+  font-size: var(--text-xs);
+  color: var(--color-gray-warm);
+  font-weight: 500;
+}
+
+/* Stats */
+.statsGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-3);
+}
+
+.statCard {
+  background: var(--color-white);
+  border-radius: var(--radius-xl);
+  padding: var(--space-4);
+  box-shadow: var(--shadow-sm);
+  border: 1px solid rgba(232, 86, 127, 0.05);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  cursor: pointer;
+}
+
+.statIconFav {
+  color: var(--color-pink);
+}
+
+.statIconCart {
+  color: var(--color-gold);
+}
+
+.statVal {
+  font-size: var(--text-lg);
+  font-weight: 800;
+  color: var(--color-wine);
+  margin-top: 2px;
+}
+
+.statLabel {
+  font-size: var(--text-xs);
+  color: var(--color-gray-warm);
+  font-weight: 600;
+}
+
+/* Info Section */
+.section {
+  background: var(--color-white);
+  border-radius: var(--radius-xl);
+  padding: var(--space-4);
+  box-shadow: var(--shadow-sm);
+  border: 1px solid rgba(232, 86, 127, 0.05);
+}
+
+.sectionTitle {
+  font-size: var(--text-base);
+  font-weight: 800;
+  color: var(--color-wine);
+  margin-bottom: var(--space-3);
+}
+
+.infoList {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+}
+
+.infoItem {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  padding: var(--space-2) 0;
+  cursor: pointer;
+  width: 100%;
+  text-align: left;
+}
+
+.infoItem:not(:last-child) {
+  border-bottom: 1px solid rgba(232, 86, 127, 0.05);
+}
+
+.infoIcon {
+  color: var(--color-pink);
+  flex-shrink: 0;
+}
+
+.infoIconInsta {
+  color: #E1306C;
+  flex-shrink: 0;
+}
+
+.infoIconShare {
+  color: #4CAF50;
+  flex-shrink: 0;
+}
+
+.infoText {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.infoLabel {
+  font-size: var(--text-xs);
+  color: var(--color-gray-warm);
+  font-weight: 600;
+}
+
+.infoValue {
+  font-size: var(--text-sm);
+  font-weight: 700;
+  color: var(--color-wine);
+}
+
+.chevron {
+  color: var(--color-gray-warm);
+  flex-shrink: 0;
+}
+
+/* Footer */
+.footer {
+  text-align: center;
+  padding: var(--space-6) 0;
+}
+
+.footerLogo {
+  font-family: var(--font-display);
+  font-size: var(--text-md);
+  font-weight: 800;
+  color: var(--color-pink);
+}
+
+.footerText {
+  font-size: var(--text-xs);
+  color: var(--color-gray-warm);
+  margin-top: 2px;
+}

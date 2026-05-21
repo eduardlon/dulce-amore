@@ -1,0 +1,17 @@
+.container {
+  padding: var(--space-1) var(--space-4) var(--space-2);
+}
+
+.greeting {
+  font-family: var(--font-display);
+  font-size: var(--text-xl);
+  font-weight: 700;
+  color: var(--color-wine);
+  line-height: 1.2;
+}
+
+.subtitle {
+  font-size: var(--text-sm);
+  color: var(--color-gray-warm);
+  margin-top: 2px;
+}
